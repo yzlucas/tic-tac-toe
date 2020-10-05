@@ -1,0 +1,26 @@
+{
+  "name": "tic-tac-toe-api",
+  "version": "1.0.0",
+  "description": "multiplayer tic-tac-toe game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzlucas/tic-tac-toe.git"
+  },
+  "author": "Lucas Li",
+  "license": "MIT",
+  "dependencies": {
+        "body-parser": "1.18.2 ",
+        "cors": "2.8.4",
+        "express": "4.16.2",
+        "redis": "2.8.0",
+        "socket.io": "2.0.4"
+    },
+  "bugs": {
+    "url": "https://github.com/yzlucas/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/yzlucas/tic-tac-toe#readme"
+}
