@@ -7,8 +7,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const socketEvents = require('./utils/socket'); 
-const routes = require('./utils/routes'); 
-const redisDB = require("./utils/db").connectDB();
+const routes = require("./utils/routes"); 
+const redisDB = require("./utils/database").connectDB();
 
 
 class Server{

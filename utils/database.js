@@ -12,7 +12,7 @@ class redisDB{
             post: 6379
         });
 
-        require("bluebird").promisifAll(client);
+        require("bluebird").promisifyAll(client);
         return client;
     }
 }
