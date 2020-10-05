@@ -15,7 +15,7 @@ class Server{
 
     constructor(){
         this.port =  process.env.PORT || 4000;
-        this.host = `localhost`;
+        this.host = "localhost";
         
         this.app = express();
         this.http = http.Server(this.app);
