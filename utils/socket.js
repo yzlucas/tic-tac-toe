@@ -116,8 +116,8 @@ class Socket{
                         playedGameGrid[singleCombination[0]]['player'] === playedGameGrid[singleCombination[1]]['player'] &&
                         playedGameGrid[singleCombination[1]]['player'] === playedGameGrid[singleCombination[2]]['player']
                     ) {
-                        winner = playedGameGrid[singleCombination[0]]['player'] + ' Wins !';
-                    } else if (movesPlayed === 9) {
+                        winner = playedGameGrid[singleCombination[0]]['player'] + ' wins with ' + movesPlayed;
+                    } else if (movesPlayed === 5) {
                         winner = 'Tie Game';
                     }
                     return false;
