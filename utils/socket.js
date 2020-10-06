@@ -77,12 +77,14 @@ class Socket{
                         emptyRooms.splice(indexPos,1);
                         fullRooms.push(roomNumber);
                     }
-                    /* User Joining socket room */                    socket.join("room-"+roomNumber);
+                    /* User Joining socket room */                   
+                    socket.join("room-"+roomNumber);
                     redisDB.set("allRooms", JSON.stringify({
                         emptyRooms: emptyRooms,
                         fullRooms : fullRooms
                     }));
-                    /* Getting the room number from socket */                    const currentRoom = (Object.keys(IO.sockets.adapter.sids[socket.id]).filter(item => item!=socket.id)[0]).split('-')[1];
+                    /* Getting the room number from socket */                    
+                    const currentRoom = (Object.keys(IO.sockets.adapter.sids[socket.id]).filter(item => item!=socket.id)[0]).split('-')[1];
                     IO.emit('rooms-available', {
                         'totalRoomCount' : totalRoomCount,
                         'fullRooms' : fullRooms,

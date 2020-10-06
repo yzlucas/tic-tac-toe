@@ -12,6 +12,14 @@ class redisDB{
             post: 6379
         });
 
+		client.on("error", (err) => {
+    		console.log("Error " + err);
+		}); 
+
+		client.on("ready", (err) => {
+    		console.log("Ready ");
+        });
+        
         require("bluebird").promisifyAll(client);
         return client;
     }
